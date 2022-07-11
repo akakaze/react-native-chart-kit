@@ -833,7 +833,8 @@ class LineChart extends AbstractChart<LineChartProps, LineChartState> {
       width,
       height,
       verticalLabelRotation,
-      horizontalLabelRotation
+      horizontalLabelRotation,
+      verticalLabelsHeightPercentage: chartConfig.verticalLabelsHeightPercentage,
     };
 
     const datas = this.getDatas(data.datasets);
@@ -909,7 +910,7 @@ class LineChart extends AbstractChart<LineChartProps, LineChartState> {
                   ? this.renderVerticalLine({
                       ...config,
                       paddingTop: paddingTop as number,
-                      paddingRight: paddingRight as number
+                      paddingRight: paddingRight as number,
                     })
                   : null)}
             </G>
@@ -920,7 +921,7 @@ class LineChart extends AbstractChart<LineChartProps, LineChartState> {
                   labels,
                   paddingTop: paddingTop as number,
                   paddingRight: paddingRight as number,
-                  formatXLabel
+                  formatXLabel,
                 })}
             </G>
             <G>
